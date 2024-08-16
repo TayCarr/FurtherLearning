@@ -46,6 +46,7 @@ answer = input(f"{first} + {second} = ")
 print(f"You answered: {answer}, the correct answer is {third}!")
 '''
 #ex 14
+'''
 from sys import argv
 script, user_name = argv
 prompt = '>'
@@ -65,3 +66,34 @@ Alright, so you said {likes} about liking me.
 You live in {lives}. Not sure where that is.
 And you have a {computer} computer. Nice.
 """)
+'''
+
+#ex 15
+'''
+from sys import argv
+script, filename = argv
+txt = open(filename)
+
+print(f"Here's your file {filename}:")
+print(txt.read())
+
+print("Type the filename again:")
+file_again = input(">")
+
+txt_again = open(file_again)
+print(txt_again.read())
+
+txt.close()
+txt_again.close()
+'''
+
+#ex 16 Reading and Writing Files
+'''
+Various commands that are good to know 
+-> close, closes the file
+-> read, reads the contents of a file you can assign them to a variable
+-> readline, reads one line of the text file 
+-> truncate, empties the file 
+-> write(stuff), writes a the stuff string to file 
+-> seek(0), moves the read/write location to the start of the file 
+'''
