@@ -94,6 +94,72 @@ Various commands that are good to know
 -> read, reads the contents of a file you can assign them to a variable
 -> readline, reads one line of the text file 
 -> truncate, empties the file 
--> write(stuff), writes a the stuff string to file 
+-> write("stuff"), writes the "stuff" string to file 
 -> seek(0), moves the read/write location to the start of the file 
+
+below uses some
 '''
+'''
+from sys import argv
+
+script, filename = argv #pull filename from arg
+
+print(f"We're going to erase {filename}.") #print filename
+print("If you do not want that hit CTRL-C (^C).") #close program
+print("If you do want that, hit RETURN.") 
+
+input("?") #get input will acept anything not save it 
+
+print("Opening the file...")
+target = open(filename, 'w') #open file in write
+
+print("Truncating the file. Goodbye!")
+target.truncate() #empties file
+
+print("Now I am going to ask you for three lines.")
+
+line1 = input("Line 1: ") #get lines from user input save to var
+line2 = input("Line 2: ")
+line3 = input("Line 3: ")
+
+print("I'm going to write these to the file.")
+
+target.write(line1) #write each line to file 
+target.write("\n") #write a new line to go to next
+target.write(line2)
+target.write("\n")
+target.write(line3)
+target.write("\n")
+
+print("And finally, we close it.")
+target.close() #make sure to close the file 
+'''
+
+#ex 17 More Files
+'''
+copy one file to another
+'''
+
+from sys import argv
+from os.path import exists
+
+script, from_file, to_file = argv
+
+print(f"Copying from {from_file} to {to_file}")
+
+in_file = open(from_file)
+indata = in_file.read()
+
+print(f"The input file is {len(indata)} bytes long")
+
+print(f"Does the output file exist? {exists(to_file)}")
+print("Ready, hit RETURN to continue, CTRL-C to abort.")
+input()
+
+out_file = open(to_file, 'w')
+out_file.write(indata)
+
+print("Alright, all done.")
+
+out_file.close()
+in_file.close()
