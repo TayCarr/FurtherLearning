@@ -264,10 +264,32 @@ def ex35():
 
 #exercise 38 Doing Things to Lists
 '''
-    review logic and keywords and so on... on paper
+    
 '''
+def ex38():
+    ten_things = "Apples Oranges Crows Telephone Light Sugar"
 
+    print("Wait there are not 10 things in that list. Let's fix that.")
 
+    stuff = ten_things.split(" ")
+    more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"]
+
+    while len(stuff) != 10:
+        next_one = more_stuff.pop()
+        print("Adding: ", next_one)
+        stuff.append(next_one)
+        print(f"There are {len(stuff)} items now")
+
+    print("There we go: ", stuff)
+    print("Doing some things with stuff:")
+
+    print(stuff[1])
+    print(stuff[-1])
+    print(stuff.pop())
+    print(' '.join(stuff))
+    print('#'.join(stuff[3:5]))
+
+    
 #run functions below
 
 #ex29()
@@ -275,4 +297,5 @@ def ex35():
 #ex31()
 #ex32()
 #ex33()
-ex35()
+#ex35()
+ex38()
