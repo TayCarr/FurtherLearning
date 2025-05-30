@@ -1,0 +1,4 @@
+So the rest of the ex use some depricated things and in trying to install it wasn't really working...
+It covered some tests basic HTML and more of the same text adventure game so I am just gonna skip those.
+This was a pretty good book, but I also knew this stuff have done it at least once before so it was just a refresher for me 
+not too sure how someone who has never touched python would feel about it, I think it may be a bit confusing for them.

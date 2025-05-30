@@ -126,7 +126,63 @@ def ex40():
 '''
   
 '''
+#Animal is-a object (base class)
+class Animal(object):
+    pass
+
+#dog is-a animal (inherits from animal)
+class Dog(Animal):
+    def __init__(self, name):
+        self.name = name
+
+#cat is-a animal (inherits from animal)
+class Cat(Animal):
+    def __init__(self, name):
+        self.name = name
+
+#person is-a class
+class Person(object):
+    def __init__(self, name):
+        self.name = name
+        #person is-a class and has-a pet
+        self.pet = None #default is none later assign
+
+#employee is-a person
+class Employee(Person):
+    def __init__(self, name, salary):
+        #inherits the name from person
+        super(Employee, self).__init__(name)
+        #has-a salary
+        self.salary = salary
+#base class
+class Fish(object):
+    pass
+#salmon is-a fish
+class Salmon(Fish):
+    pass
+#halibut is-a fish
+class Halibut(Fish):
+    pass
+
 def ex42():
+    #delta is-a dog is-a animal
+    delta = Dog("Delta")
+    #mylo is-a cat is-a animal
+    mylo = Cat("Mylo")
+    #curtis is-a person
+    curtis = Person("Curtis")
+    #has-a pet which is-a cat which is-a animal
+    curtis.pet = mylo
+    #taylor is-a employee which is-a person
+    taylor = Employee("Taylor", 120000)
+    #has-a pet which is-a dog which is-a animal
+    taylor.pet = delta
+    #flipper is-a fish
+    flipper = Fish()
+    #is-a salmon which is-a fish
+    crouse = Salmon()
+    #harry is-a halibut which is-a fish
+    harry = Halibut()
     
 
 #run functions below
