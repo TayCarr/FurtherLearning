@@ -1,0 +1,2 @@
+Book, Cracking Codes With Python
+Author, Al Sweigart
