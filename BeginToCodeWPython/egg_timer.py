@@ -3,7 +3,7 @@
     - program warns when almost ready
     - a recipe can be viewed for egg types 
 
-    - could make a site or a window that this displays in 
+    -could make a site or a window that this displays in 
 '''
 import time
 
