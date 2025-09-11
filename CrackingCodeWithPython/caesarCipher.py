@@ -10,6 +10,7 @@ if a number is greater than 25 then it will wrap back around so 26=0 28=2 think 
 
 import pyperclip #downloaded from the above site
 import sys #grabbing argv
+import caesarHacker #brute force get key
 
 #Every possible symbol that can be encrypted
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.' #can expand this to other symbols
@@ -50,6 +51,7 @@ def caesarcipher(message, key, mode):
             translated = translated + symbol
 
     pyperclip.copy(translated) #this copies the message to your clipboard
+    caesarHacker.brutecaesar(translated) #find the key with brute force, we see the key cause it prints a string in english
     return translated
 
 
