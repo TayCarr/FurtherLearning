@@ -17,6 +17,7 @@
 
 import pyperclip
 import sys
+import transpositionDecrypt
 
 def main():
     #check if arg given 
@@ -26,9 +27,10 @@ def main():
         message = sys.argv[1]
         key = sys.argv[2]
         
-        ciphertext = encryptMessage(key, message)
+        ciphertext = encryptMessage(int(key), message)
         print(ciphertext + '|') #print with pipe at the end incase there are spaces at the end of the text
         pyperclip.copy(ciphertext)
+        print(transpositionDecrypt.decryptMessage(int(key), ciphertext))
     
     else:
         print("No arguments provided. I will give you one...")
