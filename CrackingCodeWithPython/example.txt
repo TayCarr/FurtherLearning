@@ -1,0 +1,15 @@
+this is my file for testing. 
+It has a varity of lines and characters that I would like to be encrypted. I am not sure how many
+lines there will be maybe 1, 2, 3, or even four. Who knows maybe more. As for how many characters 
+there are to be in this file, I have no clue how many there will be. Probably not many, I will 
+probably copy and paste these lines tbh in order to build up the file....
+
+I didn't wanna download the entire frankenstein file... so just doing a basic little file with a mix
+of lines and characters that is in english but not anything too crazy cause... ya.... 
+this is my file for testing. 
+this is my file for testing. 
+this is my file for testing. 
+this is my file for testing. 
+this is my file for testing. 
+there should be 5 lines up above btw. 
+Ok, I am done now thanks!!
