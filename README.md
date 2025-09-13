@@ -1,7 +1,8 @@
 # FurtherLearning
 My journey to continue what I learnt in uni and maybe learn new things, as I do love these silly little books !!
 
-I declared back in 2019, in my first semester I took one comp sci class and knew this was what I wanted to do. My school projects have been a bag of mixed beans and I never really found rhe one path I wanted to follow. So here I am still bouncing around hoping to land on something I love. That being said this will be a kind of sort of dump of the things I will be doing for this next little while maybe even further who knows. These silly little books make me happy though I think I need to get some non python books since it isn't realky new stuff but for now all the things I have are python.
+
+I declared back in 2019, in my first semester I took one comp sci class and knew this was what I wanted to do. My school projects have been a bag of mixed beans and I never really found the one path I wanted to follow. So here I am still bouncing around hoping to land on something I love. That being said this will be a kind of sort of dump of the things I will be doing for this next little while maybe even further who knows. These silly little books make me happy though I think I need to get some non python books since it isn't really new stuff but for now all the things I have are python.
 
 My schooling *includes*:
 - python, as many start off with
