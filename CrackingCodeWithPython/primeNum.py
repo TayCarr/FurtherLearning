@@ -85,7 +85,7 @@ def isPrime(num):
         if (num % prime == 0):
             return False
     #if all else fails call rabinMiller() to determine if prime
-    return rabinMiller()
+    return rabinMiller(num)
 
 def generateLargePrime(keysize=1024):
     #return a random prime number that is keysize bits in size
