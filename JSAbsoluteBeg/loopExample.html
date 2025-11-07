@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A Title Goes Here</title>
+        <style></style>
+    </head>
+    <body>
+        <script>
+            var count = 10; 
+
+            function saySomething(){
+                document.writeln("hello!"); //will write "hello!" to the web page
+            }
+
+            for (var i = 0; i < count; i++){
+                saySomething();
+            }
+
+            //stopping a loop early
+            for (var i = 0; i < 100; i++){
+                document.writeln(i);
+
+                if (i == 45){
+                    break;
+                }
+            }
+
+            //skipping an iteration 
+            var floors = 28;
+
+            for (var i = 1; i <= floors; i++){
+                if (i == 13){
+                    //no floor here
+                    continue;
+                }
+                document.writeln("At floor: " + i + "<br>");
+            }
+
+            //backwards
+            for (var i = 25; i > 0; i--){
+                document.writeln("hello");
+            }
+
+            //dont have to use numbers
+            for (var i = 'a'; i != 'aaaaaaa'; i += 'a'){
+                document.writeln('hmm...');
+            }
+
+            //arrays
+            var myArray = ['one', 'two', 'three'];
+
+            for (var i = 0; i < myArray.length; i++){
+                document.writeln(myArray[i]);
+            }
+
+            //dont have to fill in all the sections
+            var i = 0;
+            var yay = true;
+
+            for (;yay;){
+                if (i == 10){
+                    yay = false;
+                }
+                i++;
+                document.writeln("weird");
+            }
+
+            //while loop 
+            var count = 0;
+
+            while (count < 10){
+                document.writeln("counting...");
+                count++;
+            }
+
+            //do while loop, evaluate the expression AFTER the first iteration so will always do atleast one 
+            count = 0;
+            
+            do {
+                count++;
+                document.writeln('other counting...')
+            } while (count < 10);
+        </script>
+    </body>
+</html>
