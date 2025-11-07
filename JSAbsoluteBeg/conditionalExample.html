@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Distance Calculator</title>
+        <style></style>
+    </head>
+    <body>
+        <script>
+            var speedLimit = 55;
+            function amISpeeding(speed){
+                if (speed >= speedLimit){
+                    alert("Yes you're speeding");
+                } else {
+                    alert("no you're not speeding");
+                }
+            }
+
+            //amISpeeding(53);
+            //amISpeeding(70);
+            var xPos = 300;
+            var yPos = 150;
+
+            function sendWarning(x, y){
+                if ((x < xPos) && (y < yPos)){
+                    alert("Adjust Position");
+                } else {
+                    alert("Fine");
+                }
+            }
+            //sendWarning(500, 160);
+            //sendWarning(100, 180);
+            //sendWarning(100, 100);
+
+            
+            
+        </script>
+    </body>
+</html>
