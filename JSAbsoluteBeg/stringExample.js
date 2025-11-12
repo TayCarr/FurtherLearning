@@ -43,15 +43,38 @@ var theBigString = "This is a longer string for this example.";
 //slice method
 alert(theBigString.slice(10, 16));
 alert(theBigString.slice(0, -6));
-alert(theBigString.slice(-14, -7));
+alert(theBigString.slice(-10, -7));
 
 //substr method
-var newString = substr(0, 4); //if ommit the end index it will return the string from the given start till the end of the string substr(5)
+var newString = theBigString.substr(0, 7); //if ommit the end index it will return the string from the given start till the end of the string substr(5)
+console.log(newString);
 alert(newString);
 
 //splitting a string
 var quote = "If you can add, you can subtract.";
 var splitWords = quote.split(" "); //split on the spaces
+//can split on w/e 
+
+//finding something inside a string
+var question = 'I wonder what the pigs did to make the birds angry.';
+alert(question.indexOf('pigs'));//18
+alert(question.indexOf('z'));//-1, not found
+//lastIndexOf
+alert(question.lastIndexOf("the"));
+//can specify a starting point for indexOf
+alert(question.indexOf("the", 20));
+
+//match regex
+var phrase = "There are 3 little pigs.";
+var regexp = /[0-9]/;
+var numbers = phrase.match(regexp);
+alert(numbers[0]);//3
+
+//upper and lower case methods
+alert(phrase.toLowerCase());
+alert(phrase.toUpperCase());
+
+
 
 
 
