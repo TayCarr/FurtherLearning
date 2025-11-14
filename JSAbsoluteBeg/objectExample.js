@@ -100,4 +100,45 @@ Array.prototype.shuffle = function(){
 //not gonna bother to write the example its just chnaging slice() to instead return "this is awsome"
 
 
+//EQUALITY
+/*
+    == and != use type coersion so 42 == "42" will come back as true even though its num vs str
+    BUT strict equality and inequality === and !=== would return false if given 42 === "42"
+    generally strict is used more than the other, it will better help spot errors in your code
 
+*/
+alert(42 == "42");
+alert(42 === "42");
+
+//keep in mind comparing objects will act unexpectedly 
+
+//NULL and UNDEFINED
+//null stands for no value, setting a var to null gives it a clear indication that no value exists
+
+//can set a value to null or even clear a set value to be null after use 
+var test = null; //if you dont set as null then it will default to undefined and have unexpected behaviour 
+
+if (test === null){ //good practice to use ===
+    test = 'A name...';
+} else {
+    test = null;
+}
+
+//undefined represents something that hasnt been.. defined yet, the undefined primitive
+// most commonly seen when you try to access a variable that has yet to have anything assigned to it
+var myVar;
+alert(myVar);//undefined
+
+function doNothing() {
+    return;
+}
+
+var weekendPlans = doNothing;
+alert(doNothing); //undefined
+
+//typically wont assign undefined to something but you may want to test if something is undefined
+if (myVar === undefined){ //again want to use ===
+    //do something 
+    alert("define me!"); 
+}
+//null == undefined will result in true !!! but null === undefined will return false 
