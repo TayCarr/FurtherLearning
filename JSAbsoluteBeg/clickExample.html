@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Click Anywhere!!</title>
+    </head>
+    <body>
+        <script>
+            document.addEventListener("click", changeColour, false);
+            //document.removeEventListener("click", changeColour, false); //neutralizes the above listener, now wont change colour
+            document.addEventListener("dblclick", removeColour, false); //double click to go to white
+            function changeColour(){
+                document.body.style.backgroundColor = "#FFC926";
+            }
+            function removeColour(){
+                document.body.style.backgroundColor = "#0000";
+            }
+        </script>
+    </body>
+</html>
