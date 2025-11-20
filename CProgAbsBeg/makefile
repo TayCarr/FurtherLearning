@@ -7,9 +7,16 @@
 CFLAGS= -Wall #-std=c11 
 CC= gcc 
 
-example: ch2ex1.o
+example: ch2ex2.o
+	$(CC) $(CFLAGS) ch2ex2.o -o ex
+	./ex
+
+example1: ch2ex1.o
 	$(CC) $(CFLAGS) ch2ex1.o -o ex1
 	./ex1
+
+ch2ex2.o: ch2ex2.c
+	$(CC) $(CFLAGS) -g -c ch2ex2.c
 
 ch2ex1.o: ch2ex1.c
 	$(CC) $(CFLAGS) -g -c ch2ex1.c
@@ -19,7 +26,7 @@ valgrindTest: convert
 
 clean:
 	rm -f *.o *~ 
-	rm ex1
+	rm ex*
 
 tar:
 	
