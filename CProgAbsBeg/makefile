@@ -1,0 +1,25 @@
+#-------------------------
+# Taylor Carreiro 
+# just for ease of compiling and w/e
+#--------------------------
+
+
+CFLAGS= -Wall #-std=c11 
+CC= gcc 
+
+example: ch2ex1.o
+	$(CC) $(CFLAGS) ch2ex1.o -o ex1
+	./ex1
+
+ch2ex1.o: ch2ex1.c
+	$(CC) $(CFLAGS) -g -c ch2ex1.c
+ 
+valgrindTest: convert 
+	valgrind -s --leak-check=yes ./ex1
+
+clean:
+	rm -f *.o *~ 
+	rm ex1
+
+tar:
+	

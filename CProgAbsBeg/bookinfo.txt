@@ -1,0 +1,5 @@
+Book, C Programming Absolute Beginner's Guide
+Author, Greg Perry and Dean Miller
+
+
+~completed
