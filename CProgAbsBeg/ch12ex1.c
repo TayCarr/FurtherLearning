@@ -70,6 +70,25 @@ int main(){
         printf("Go to room 2\n\n");
     }
 
+    //example checking user input
+    char ans;
+
+    printf("Is your printer on? (Y/N) ");
+    scanf(" %c", &ans);
+
+    if (ans == 'Y' || ans == 'N'){
+        if (ans == 'Y'){
+            printf("Starting print job.\n\n");
+        }
+        else{
+            printf("Please turn your printer on now.\n\n");
+        }
+
+    }
+    else{
+        printf("You did not enter Y or N\n\n");
+    }
+
     
     return 0;
 
