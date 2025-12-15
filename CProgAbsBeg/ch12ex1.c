@@ -20,6 +20,8 @@ int main(){
     int basketball = 5;
     int football = 25;
 
+    int zero = 0;
+
     //AND operator if the casts of the shows would have enough members to make a team
     if ((friends + beatles >= baseball) && (friends + avengers >= football)){
         printf("Friends and Beatles have enough to make a baseball team AND Friends and Avengers have enough for a football team.\n\n");
@@ -42,6 +44,30 @@ int main(){
     }
     else{
         printf("If you combine a baseball and basketball team there is more players than on a football team.\n\n");
+    }
+
+    //example of 0
+
+    if (zero == 0){
+        printf("This is == 0\n");
+    }
+    if (!zero){
+        printf("This is also == 0 using the NOT operator\n\n");
+    }
+
+    //example prog 2
+    //if users last name starts with p-q then it will print a message else will print a dif message
+
+    //set up an array for last name 
+    char name[25];
+    printf("What is your last name? (Capitalize first letter) ");
+    scanf(" %s", name);
+
+    if ((name[0] >= 'P') && (name[0] <= 'S')){
+        printf("Go to room 1\n\n");
+    }
+    else{
+        printf("Go to room 2\n\n");
     }
 
     
