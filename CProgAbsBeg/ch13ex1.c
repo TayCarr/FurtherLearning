@@ -1,8 +1,5 @@
 /*Sample program that asks the user for a number from 1 to 100 and tells you if it is divisible by numbers 2-9*/
 
-
-
-
 #include <stdio.h>
 
 int main(){
