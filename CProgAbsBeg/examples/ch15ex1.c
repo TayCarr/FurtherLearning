@@ -1,4 +1,4 @@
-/*Sample program that  */
+/*Sample program that asks for movie ratings  */
 
 
 #include <stdio.h>
