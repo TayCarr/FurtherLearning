@@ -13,7 +13,7 @@ int main(){
         printf("\nWhat is the next students test score? ");
         scanf(" %f", &stTest);
 
-        if (stTest < 0.0){
+        if (stTest < 0.0){ //-1 to end the loop early
             break;
         }
 
@@ -21,7 +21,7 @@ int main(){
     }
 
     avg = total / numTest; 
-    printf("\nThe avg is: %.1f%%.\n", avg);
+    printf("\nThe avg is: %.1f%%.\n", avg);//%% double needed to print % since it is considered control
     
     return 0;
 
