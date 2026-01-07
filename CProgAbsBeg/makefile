@@ -7,14 +7,20 @@
 CFLAGS= -Wall #-std=c11 
 CC= gcc 
 
-example: ch17ex1.o
+example: ch18ex1.o
+	$(CC) $(CFLAGS) ch18ex1.o -o ex
+	./ex
+ch18ex1.o: ch18ex1.c
+	$(CC) $(CFLAGS) -g -c ch18ex1.c
+
+
+
+
+example17: ch17ex1.o
 	$(CC) $(CFLAGS) ch17ex1.o -o ex
 	./ex
 ch17ex1.o: ch17ex1.c
 	$(CC) $(CFLAGS) -g -c ch17ex1.c
-
-
-
 example16b: ch16ex2.o
 	$(CC) $(CFLAGS) ch16ex2.o -o ex
 	./ex
