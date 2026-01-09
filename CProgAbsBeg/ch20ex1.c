@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <stdlib.h>
 
 int main(){
 
@@ -30,6 +31,11 @@ int main(){
     printf("e raised to 2 is %.3f\n", exp(2));
     printf("The natural log of 5 is %.3f\n", log(5));
     printf("The base-10 log of 5 is %.3f\n", log10(5));
+
+    printf("\nSection 5: Generate Random Numbers\n");
+    printf("Random number is %d\n", rand());
+    printf("Random number from 1 to 6 is %d\n", ((rand() % 5) + 1));
+    
     
     return 0;
 
