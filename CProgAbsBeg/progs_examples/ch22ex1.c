@@ -1,4 +1,4 @@
-/*Sample program */
+/*Sample program asks for customer id and checks their balance*/
 
 #include <stdio.h>
 
