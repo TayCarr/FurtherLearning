@@ -1,0 +1,9 @@
+Book, C Programming A Modern Approach 2nd
+Author, K.N.King
+
+--> Textbook, may not do ALL examples (especially since I just completed the basic book on C), 
+    I did use this text in a class at uni so I have also done some of these.. If there is an exercise or something 
+    that sticks out to me then I will include it but I will likely skip over the basics !
+
+
+~not completed
