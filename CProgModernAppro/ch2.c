@@ -12,7 +12,7 @@
  * 5. ask user for a value x and calculate 3x^5+2x^4-5x^3-x^2+7x-6
  * 6. modify prog 5 to horners rule ((((3x+2)x-5)x-1)x+7)x-6
  * 7. ask user for a dollar amount then show how to pay amount in the smallest number of bills 20/10/5 etc
- * 8.
+ * 8. calculate the remaining balance on a loan after the first, second, and third monthly payments
 */
 
 #include <stdio.h>
@@ -27,6 +27,7 @@ float ex2(void);
 float ex4(void);
 float ex5(void);
 float ex7(void);
+float ex8(void);
 
 
 int main(){
@@ -35,13 +36,46 @@ int main(){
     //ex2();
     //ex4();
     //ex5();
-    ex7();
+    //ex7();
+    ex8();
+
 
     return 0;
 }
 
 //*********************
+//calculate the remaining balance on a loan after the first, second, and third monthly payments
+float ex8(){
+    float loan, interest, payment, rate;
+    int i;
+
+    printf("Enter loan amount: ");
+    scanf(" %f", &loan);
+    printf("Enter interest amount: ");
+    scanf(" %f", &interest);
+    printf("Enter monthly payment amount: ");
+    scanf(" %f", &payment);
+
+    rate = (interest / 100.00);
+    rate = rate / 12.0;
+    printf("%.6f\n", rate);
+
+    for(i = 0; i < 3; i++ ){
+        loan = loan + (loan * rate);
+        loan = loan - payment;
+        
+        printf("Balance remaining after payment #%d: $%.2f\n", i+1, loan); //ummmm the cents is off?? idk why...
+        //googled the like process of interest calculations /month and this should be correct way so w/e this is good enough lol
+
+    }
+
+
+    return 0.0;
+}
+
+//*********************
 //ask user for a dollar amount then show how to pay amount in the smallest number of bills
+//recd to /20 and use that did it a dif way maybe that way is better? could do that logic in my loop 
 float ex7(){
     float dollar, temp;
     int twenty = 0, ten = 0, five = 0, toonie = 0, loonie = 0;
