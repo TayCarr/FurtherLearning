@@ -1,0 +1,12 @@
+Thought since this book is a textbook I could just note bits and pieces in here not sure how the format will be or 
+if it will get confusing idk just noting bits
+
+ch2
+    simple c programs take the form:
+
+        directives
+        int main(void){
+            statements
+        }
+    
+    
