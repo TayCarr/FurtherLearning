@@ -36,10 +36,14 @@ int main(){
 //*********************
 //calculate volume of sphere
 //using math library instead of r*r*r
-//10 metre radius using the formula v=(4/3)*pi*r^3
+//2, 3-> add ability for user to input radius 
 float ex2(void){
     float volume;
-    float radius = 10.0f; 
+    //float radius = 10.0f; 
+    float radius;
+
+    printf("Radius: ");
+    scanf(" %f", &radius);
     
 
     volume = (4.0f * 3.0f) * 3.14f * pow(radius, 3.0);
