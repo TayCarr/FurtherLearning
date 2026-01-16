@@ -9,4 +9,17 @@ ch2
             statements
         }
     
-    
+    -> flags for finding errors in programs
+        -Wall       compiler produces warning messages when it detects possible errors (-W can be used and followed 
+                    by codes for specific options -Wall means all options)
+        -pedantic   issues all warnings required by c standard, causes programs using nonstandard features to be
+                    rejected
+        -ansi       turns off features of GCC that arent standard C and enables a few standard features that are 
+                    normally disabled
+        -std=c89
+        -std=c99    specifies which version of c compiler should be used to check the program
+
+        For example can be used in combination like 
+            gcc -O -Wall -W -pedantic -ansi - std=c99 -o pun pun.c
+    -> ending a float value with f (ex: 2.2f) will ensure it is saved as a float, if the f is not included then the value
+        is usually stored as a double, doubles can be larger than floats. 
