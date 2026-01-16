@@ -8,7 +8,7 @@
  * 1. create a program that uses printf to display the following picture (checkmark made of stars)
  * 2. prog that computes the volume of a sphere with a 10 metre radius using the formula v=4/(3*pi*r^3)
  * 3. modify prog 2 to prompt the user to enter a radius to use in calculations
- * 4.
+ * 4. ask user to enter a dollar and cents amount, display amount with 5% tax
  * 5.
  * 6.
  * 7.
@@ -19,18 +19,34 @@
 #include <math.h>
 
 //defines 
+#define TAX 1.05 //5% tax
 
 //prototype functions 
 void ex1(void);
 float ex2(void);
+float ex4(void);
 
 
 int main(){
 
     //ex1();
-    ex2();
+    //ex2();
+    ex4();
 
     return 0;
+}
+
+//*********************
+//get user $ input calculate total after tax 5%
+float ex4(void){
+    float amount, total;
+
+    printf("Enter an amount: ");
+    scanf(" %f", &amount);
+    total = amount * TAX;
+    printf("With tax added: %.2f\n\n", total);
+
+    return total;
 }
 
 //*********************
