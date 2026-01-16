@@ -11,7 +11,7 @@
  * 4. ask user to enter a dollar and cents amount, display amount with 5% tax
  * 5. ask user for a value x and calculate 3x^5+2x^4-5x^3-x^2+7x-6
  * 6. modify prog 5 to horners rule ((((3x+2)x-5)x-1)x+7)x-6
- * 7.
+ * 7. ask user for a dollar amount then show how to pay amount in the smallest number of bills 20/10/5 etc
  * 8.
 */
 
@@ -26,6 +26,7 @@ void ex1(void);
 float ex2(void);
 float ex4(void);
 float ex5(void);
+float ex7(void);
 
 
 int main(){
@@ -33,9 +34,54 @@ int main(){
     //ex1();
     //ex2();
     //ex4();
-    ex5();
+    //ex5();
+    ex7();
 
     return 0;
+}
+
+//*********************
+//ask user for a dollar amount then show how to pay amount in the smallest number of bills
+float ex7(){
+    float dollar, temp;
+    int twenty = 0, ten = 0, five = 0, toonie = 0, loonie = 0;
+
+    printf("Enter a dollar amount: ");
+    scanf(" %f", &dollar);
+
+    while(dollar >= 20.0){
+        twenty++;
+        dollar = dollar - 20;
+        //printf("\n twenty %.1f\n", dollar);
+
+    }
+    while(dollar >= 10.0){
+        ten++;
+        dollar = dollar - 10;
+        //printf("\n ten %.1f\n", dollar);
+        
+    }
+    while(dollar >= 5.0){
+        five++;
+        dollar = dollar - 5;
+        //printf("\n five %.1f\n", dollar);
+        
+    }
+    while(dollar >= 2.0){
+        toonie++;
+        dollar = dollar - 2;
+        //printf("\n toonie %.1f\n", dollar);
+        
+    }
+    while(dollar >= 1.0){
+        loonie++;
+        dollar = dollar - 1;
+        //printf("\n loonie %.1f\n", dollar);
+        
+    }
+
+    printf("$20 bills: %d\n$10 bills: %d\n$5 bills: %d\ntoonies: %d\nloonies: %d\n\n", twenty, ten, five, toonie, loonie);
+    return 0.0;
 }
 
 //*********************
@@ -49,7 +95,7 @@ float ex5(){
 
     total = (3 * pow(x, 5)) + (2 * pow(x, 4)) - (5 * pow(x, 3)) - (pow(x, 2)) + (7 * x) - 6;
     horner = ((((3 * x + 2) * x - 5) * x - 1) * x + 7) * x - 6;
-    
+
     printf("Total: %.1f\nHorner: %.1f\n\n", total, horner);
 
     return horner;
