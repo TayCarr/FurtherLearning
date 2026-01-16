@@ -23,3 +23,14 @@ ch2
             gcc -O -Wall -W -pedantic -ansi - std=c99 -o pun pun.c
     -> ending a float value with f (ex: 2.2f) will ensure it is saved as a float, if the f is not included then the value
         is usually stored as a double, doubles can be larger than floats. 
+
+ch3 
+    printf to format numbers (if value is say 33)
+        |%5d| ->|   33| (right justified 5 spaces 33 takes 2 so 3 spaces added)
+        |%-5d| ->|33   | (left justified 5 spaces 33 takes 2 so 3 spaces added)
+        %e -> exponential form (floats)
+        %i in scanf can match an integer expressed in octal base, decimal or hexadecimal base. if enter 056 %i treats it as an octal
+            if it has 0X or 0x then it is saved as a hexa number 
+
+    %% -> if want to print % need to use double for c to recognize %
+    
