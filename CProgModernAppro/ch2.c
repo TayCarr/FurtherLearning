@@ -9,8 +9,8 @@
  * 2. prog that computes the volume of a sphere with a 10 metre radius using the formula v=4/(3*pi*r^3)
  * 3. modify prog 2 to prompt the user to enter a radius to use in calculations
  * 4. ask user to enter a dollar and cents amount, display amount with 5% tax
- * 5.
- * 6.
+ * 5. ask user for a value x and calculate 3x^5+2x^4-5x^3-x^2+7x-6
+ * 6. modify prog 5 to horners rule ((((3x+2)x-5)x-1)x+7)x-6
  * 7.
  * 8.
 */
@@ -25,16 +25,36 @@
 void ex1(void);
 float ex2(void);
 float ex4(void);
+float ex5(void);
 
 
 int main(){
 
     //ex1();
     //ex2();
-    ex4();
+    //ex4();
+    ex5();
 
     return 0;
 }
+
+//*********************
+//ask user for x value and calculate below (using math.h for pow)
+//3x^5+2x^4-5x^3-x^2+7x-6
+//then calculate with horners ((((3x+2)x-5)x-1)x+7)x-6
+float ex5(){
+    float x, total, horner;
+    printf("Enter a value for x: ");
+    scanf(" %f", &x);
+
+    total = (3 * pow(x, 5)) + (2 * pow(x, 4)) - (5 * pow(x, 3)) - (pow(x, 2)) + (7 * x) - 6;
+    horner = ((((3 * x + 2) * x - 5) * x - 1) * x + 7) * x - 6;
+    
+    printf("Total: %.1f\nHorner: %.1f\n\n", total, horner);
+
+    return horner;
+}
+
 
 //*********************
 //get user $ input calculate total after tax 5%
