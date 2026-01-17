@@ -29,10 +29,10 @@ int main(){
 
     //ex1();
     //ex2();
-    //ex4();
+    ex4();
     //ex5();
     //ex7();
-    ex3();
+    //ex3();
 
 
     return 0;
@@ -56,8 +56,13 @@ float ex5(){
 
 
 //*********************
-//
+//get telephone number from user in (xxx) xxx-xxxx format display xxx.xxx.xxxx
 float ex4(void){
+    int first, second, third;
+    printf("Enter phone number [(xxx) xxx-xxxx]: ");
+    scanf(" (%d) %d-%d", &first, &second, &third);
+
+    printf("%d.%d.%d\n", first, second, third);
     
 
     return 0.0;
