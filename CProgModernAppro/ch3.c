@@ -22,28 +22,23 @@ float ex2(void);
 float ex4(void);
 float ex5(void);
 float ex7(void);
-float ex8(void);
+float ex3(void);
 
 
 int main(){
 
     //ex1();
-    ex2();
+    //ex2();
     //ex4();
     //ex5();
     //ex7();
-    //ex8();
+    ex3();
 
 
     return 0;
 }
 
-//*********************
-//
-float ex8(){
-    
-    return 0.0; 
-}
+
 
 //*********************
 //
@@ -66,6 +61,25 @@ float ex4(void){
     
 
     return 0.0;
+}
+
+//*********************
+//splitting the codes for isbn 13 digits arranged in 5 groups 
+float ex3(){
+
+    int gsi, group, publisher, item, check;
+
+    printf("Enter ISBN: ");
+    scanf(" %d-%d-%d-%d-%d", &gsi, &group, &publisher, &item, &check);
+
+    printf("GSI prefix: %d\n", gsi);
+    printf("Group identifier: %d\n", group);
+    printf("Publisher Code: %d\n", publisher);
+    printf("Item Number: %d\n", item);
+    printf("Check Digit: %d\n", check);
+
+    
+    return 0.0; 
 }
 
 //*********************
