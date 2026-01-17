@@ -28,7 +28,7 @@ float ex8(void);
 int main(){
 
     //ex1();
-    //ex2();
+    ex2();
     //ex4();
     //ex5();
     //ex7();
@@ -69,11 +69,22 @@ float ex4(void){
 }
 
 //*********************
-// 
+//formats product info entered by user
 float ex2(void){
+    int item, day, month, year;
+    float price; 
+
+    printf("Enter item number: ");
+    scanf(" %d", &item);
+    printf("Enter unit price: ");
+    scanf(" %f", &price);
+    printf("Enter purchase date (mm/dd/yyyy): ");
+    scanf(" %d/%d/%d", &month, &day, &year);
+
+    printf("Item\t\tUnit\t\tPurchase\n\t\tPrice\t\tDate\n");
+    printf("%d\t\t$%7.2f\t%d/%d/%d\n\n", item, price, month, day, year);
 
     return 0.0;
-
 }
 
 //*********************

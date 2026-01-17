@@ -7,11 +7,11 @@
 CFLAGS= -Wall #-std=c11 
 CC= gcc 
 
-example: ch2.o
-	$(CC) $(CFLAGS) ch2.o -o ex
+example: ch3.o
+	$(CC) $(CFLAGS) ch3.o -o ex
 	./ex
-ch2.o: ch2.c
-	$(CC) $(CFLAGS) -g -c ch2.c
+ch3.o: ch3.c
+	$(CC) $(CFLAGS) -g -c ch3.c
 
 
  
