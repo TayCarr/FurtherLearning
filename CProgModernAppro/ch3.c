@@ -13,6 +13,8 @@
 */
 
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 //defines 
 
@@ -21,7 +23,7 @@ void ex1(void);
 float ex2(void);
 float ex4(void);
 float ex5(void);
-float ex7(void);
+float ex6(void);
 float ex3(void);
 
 
@@ -29,8 +31,8 @@ int main(){
 
     //ex1();
     //ex2();
-    ex4();
-    //ex5();
+    //ex4();
+    ex5();
     //ex7();
     //ex3();
 
@@ -42,14 +44,66 @@ int main(){
 
 //*********************
 //
-float ex7(){
+float ex6(){
    
     return 0.0;
 }
 
 //*********************
-//
+//ask user to input numbers from 1-16 in any order then display in a 4x4 arrangement show row sums, 
+//column sums, diagonal sums
 float ex5(){
+    char line[40];
+    char *token; 
+    int nums[16];
+    int i = 0;
+    int temp;
+
+    printf("Enter the numbers from 1 to 16 in any order: ");
+    //scanf(" %s", line);
+    fgets(line, 40, stdin);
+    printf("\n");
+
+    token = strtok(line, " ");
+    while(token != NULL && i < 40){
+        nums[i] = atoi(token);
+        //printf("%d\n", nums[i]);
+        token = strtok(NULL, " ");
+        i++;
+
+    }
+
+    for (i = 0; i < 16; i++){
+        printf("%2d ", nums[i]);
+
+        if (i == 3 || i == 7 || i == 11 || i == 15){
+            printf("\n");
+        }
+    }
+    temp = nums[0] + nums[1] + nums[2] + nums[3];
+    printf("\nRow sums: %d ", temp);
+    temp = nums[0] + nums[1] + nums[2] + nums[3];
+    printf("%d ", temp);
+    temp = nums[4] + nums[5] + nums[6] + nums[7];
+    printf("%d ", temp);
+    temp = nums[8] + nums[9] + nums[10] + nums[11];
+    printf("%d ", temp);
+    temp = nums[12] + nums[13] + nums[14] + nums[15];
+    printf("%d\n", temp);
+    
+    temp = nums[0] + nums[4] + nums[8] + nums[12];
+    printf("Column sums: %d ", temp);
+    temp = nums[1] + nums[5] + nums[9] + nums[13];
+    printf("%d ", temp);
+    temp = nums[2] + nums[6] + nums[10] + nums[14];
+    printf("%d ", temp);
+    temp = nums[3] + nums[7] + nums[11] + nums[15];
+    printf("%d\n", temp);
+
+    temp = nums[0] + nums[5] + nums[10] + nums[15];
+    printf("Diagonal sums: %d ", temp);
+    temp = nums[3] + nums[6] + nums[9] + nums[12];
+    printf("%d\n", temp);
 
     return 0.0;
 }
