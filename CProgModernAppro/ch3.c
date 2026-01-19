@@ -9,7 +9,7 @@
  * 3. splitting the codes for isbn 
  * 4. get telephone number from user in (xxx) xxx-xxxx format display xxx.xxx.xxxx
  * 5. ask user to input numbers from 1-16 in any order then display in a 4x4 arrangement show row sums, column sums, diagonal sums
- * 6. modify addfrac.c program from the chapter to allow user to enter both fractions seperated by a +
+ * 6. 
 */
 
 #include <stdio.h>
@@ -23,7 +23,6 @@ void ex1(void);
 float ex2(void);
 float ex4(void);
 float ex5(void);
-float ex6(void);
 float ex3(void);
 
 
@@ -41,13 +40,6 @@ int main(){
 }
 
 
-
-//*********************
-//
-float ex6(){
-   
-    return 0.0;
-}
 
 //*********************
 //ask user to input numbers from 1-16 in any order then display in a 4x4 arrangement show row sums, 

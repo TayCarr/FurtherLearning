@@ -21,10 +21,10 @@
 //prototype functions 
 void ex1(void);
 float ex2(void);
+float ex3(void);
 float ex4(void);
 float ex5(void);
-float ex7(void);
-float ex8(void);
+float ex6(void);
 
 
 int main(){
@@ -65,6 +65,14 @@ float ex5(){
 //*********************
 //
 float ex4(void){
+    
+
+    return 0.0;
+}
+
+//*********************
+//
+float ex3(void){
     
 
     return 0.0;
