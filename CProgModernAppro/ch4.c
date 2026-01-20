@@ -7,6 +7,7 @@
  * 1. program that asks for a 2 digit number then prints it to user in reverse
  * 2. extend above to handle 3 digit
  * 3. rewrite #2 so that it prints the reverse without using aritmetic
+ * TODO below, might skip them as they are so simple and very... boring.... all kinda hit the same topics...
  * 4. read in an integer and display it in octal base
  * 5. rewrite upc program so that the user enters one long digit instead of groups of 5
  * 6.modify upc program to work for EAN barcode numbers too  
