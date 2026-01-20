@@ -29,8 +29,8 @@ float ex6(void);
 int main(){
 
     //ex1();
-    ex3();
-    //ex4();
+    //ex3();
+    ex4();
     //ex5();
     //ex7();
     //ex8();
@@ -62,9 +62,19 @@ float ex5(){
 
 
 //*********************
-//
+//read in an integer and display it in octal base
+//TODO maybe have an array to toss the numbers in instead of doing math
 float ex4(void){
-    
+    int num, octal, temp; 
+
+    printf("Enter a number between 0 and 32767: ");
+    scanf(" %d", &num);
+
+    octal = num % 8;
+    num = num / 8;
+    temp = (num % 8) * 10;
+    octal = octal + temp; 
+    printf("In octal your number is: %d\n", octal);
 
     return 0.0;
 }
