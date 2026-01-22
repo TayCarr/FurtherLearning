@@ -20,7 +20,7 @@
  *      whose dep time is closest to input 
  * 9. prompt user to enter two dates and then indicate which date comes earlier on the calendar 
  * 10. using switch statement write a program that converts a numerical grade to a letter grade
- * 11. ask user for two-digit number, use one switch statement to print the word for the first digit use a second switch statement to print the 
+ * 11./ask user for two-digit number, use one switch statement to print the word for the first digit use a second switch statement to print the 
  *      word for the second digit
 */
 
@@ -36,25 +36,138 @@ float ex4(void);
 float ex5(void);
 float ex6(void);
 float ex7(void);
+float ex11(void);
 
 
 int main(){
 
-    ex1();
+    //ex1();
     //ex2();
     //ex7();
+    ex11();
 
     //ex4();
     //ex5();
-    //ex8();
-
 
     return 0;
 }
 
 //*********************
-//
-float ex8(){
+//ask user for two-digit number, use one switch statement to print the word for the first digit use a second 
+//switch statement to print the word for the second digit
+float ex11(){
+    int num;
+    int first, second;
+
+    printf("Enter a two-digit number: ");
+    scanf(" %d", &num);
+
+    first = num/10;
+    second = num%10;
+
+    printf("You entered the number ");
+    if (num > 10 && num < 20){
+        //TODO special cases
+        switch (num)
+        {
+        case 11:
+            printf("Eleven\n");
+            return 0.0;
+        case 12:
+            printf("Twelve\n");
+            return 0.0;
+        case 13:
+            printf("Thirteen\n");
+            return 0.0;
+        case 14:
+            printf("Fourteen\n");
+            return 0.0;
+        case 15:
+            printf("Fifteen\n");
+            return 0.0;
+        case 16:
+            printf("Sixteen\n");
+            return 0.0;
+        case 17:
+            printf("Seventeen\n");
+            return 0.0;
+        case 18:
+            printf("Eighteen\n");
+            return 0.0;
+        case 19:
+            printf("Nineteen\n");
+            return 0.0;
+        
+        default:
+            break;
+        }
+    }
+
+    switch (first)
+    {
+    case 1:
+        printf("Ten\n");
+        return 0.0;
+    case 2:
+        printf("Twenty-");
+        break;
+    case 3:
+        printf("Thirty-");
+        break;
+    case 4:
+        printf("Fourty-");
+        break;
+    case 5:
+        printf("Fifty-");
+        break;
+    case 6:
+        printf("Sixty-");
+        break;
+    case 7:
+        printf("Seventy-");
+        break;
+    case 8:
+        printf("Eighty-");
+        break;
+    case 9:
+        printf("Ninety-");
+        break; 
+    default:
+        break;
+    }
+
+    switch (second)
+    {
+    case 1:
+        printf("one.\n");
+        break;
+    case 2:
+        printf("two.\n");
+        break;
+    case 3:
+        printf("three.\n");
+        break;
+    case 4:
+        printf("four.\n");
+        break;
+    case 5:
+        printf("five.\n");
+        break;
+    case 6:
+        printf("six\n");
+        break;
+    case 7:
+        printf("sevem\n");
+        break;
+    case 8:
+        printf("eight.\n");
+        break;
+    case 9:
+        printf("nine\n");
+        break; 
+    default:
+        break;
+    }
     
     return 0.0; 
 }
