@@ -5,11 +5,11 @@
 
 /**
  * 1./program that finds the largest in a series of numbers entered by user
- * 2. asks user to enter two ints, then calculates and displays the GCD
- * 3. write program that asks user to enter a fraction then display it in lowest terms
+ * 2./asks user to enter two ints, then calculates and displays the GCD
+ * 3./write program that asks user to enter a fraction then display it in lowest terms
  * 4. add a loop to broker.c so that the user can enter more than one trade and the program will calculate the commission on each
- * 5. generalize prject 1 ch4 
- * 6. program that asks user to enter number n then displays even squares between 1-n
+ * 5. generalize project 1 ch4 
+ * 6./program that asks user to enter number n then displays even squares between 1-n
  * 7. rearrange square.c so that the for loop inits i, tests i, and increments i
  * 8. print one-month calendar, user specifies days and the day month begins
  * 9. proj 8 ch2 uhhhhh
@@ -35,7 +35,8 @@ int main(){
 
     //ex1();
     //ex2();
-    ex3();
+    //ex3();
+    ex6();
 
     //ex4();
     //ex5();
@@ -69,8 +70,22 @@ float ex5(){
 
 
 //*********************
-//
-float ex4(void){
+//program that asks user to enter number n then displays even squares between 1-n
+float ex6(void){
+    int n, i = 2, square = 0;
+
+    printf("Enter an integer: ");
+    scanf(" %d", &n);
+    //square of even number always even same is true for odd SO mod 2 == 0 means even if not continue
+    while (square < n + 1){
+        square = i*i;
+        if (i % 2 == 0){
+            
+            printf("%d\n", square);
+        }
+        
+        i++;
+    }
     
 
     return 0.0;
@@ -96,8 +111,8 @@ float ex3(void){
 //*********************
 // asks user to enter two ints, then calculates and displays the GCD
 int ex2(int first, int second){
-    int gcd;
-    int m = first, n = second, r, temp;
+    int gcd = 0;
+    int m = first, n = second, r;
 
     //printf("Enter two integers: ");
     //scanf(" %d %d", &m, &n);
@@ -106,7 +121,6 @@ int ex2(int first, int second){
 
     do{
         r = m%n;
-        temp = m/n;
 
         if (r == 0)
         {
