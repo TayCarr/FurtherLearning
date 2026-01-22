@@ -33,7 +33,9 @@ float ex6(void);
 
 int main(){
 
-    //ex1();
+    ex1();
+
+
     //ex2();
     //ex4();
     //ex5();
@@ -95,5 +97,19 @@ float ex2(void){
 //is entered program will display the largest num, can be floats 
 
 void ex1(void){
+    float temp, max;
+
+    printf("Enter a number: ");
+    scanf(" %f", &max);
+    temp = max;
+
+    while(temp != 0){
+        printf("Enter a number: ");
+        scanf(" %f", &temp);
+        if (temp > max){
+            max = temp;
+        }
+    }
+    printf("The largest number entered was %.6f\n\n", max);
     
 }
