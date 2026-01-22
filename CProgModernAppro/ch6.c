@@ -4,7 +4,7 @@
 */
 
 /**
- * 1. program that finds the largest in a series of numbers entered by user
+ * 1./program that finds the largest in a series of numbers entered by user
  * 2. asks user to enter two ints, then calculates and displays the GCD
  * 3. write program that asks user to enter a fraction then display it in lowest terms
  * 4. add a loop to broker.c so that the user can enter more than one trade and the program will calculate the commission on each
@@ -24,7 +24,7 @@
 
 //prototype functions 
 void ex1(void);
-float ex2(void);
+int ex2(void);
 float ex3(void);
 float ex4(void);
 float ex5(void);
@@ -33,10 +33,9 @@ float ex6(void);
 
 int main(){
 
-    ex1();
+    //ex1();
+    ex2();
 
-
-    //ex2();
     //ex4();
     //ex5();
     //ex7();
@@ -85,10 +84,33 @@ float ex3(void){
 }
 
 //*********************
-// 
-float ex2(void){
+// asks user to enter two ints, then calculates and displays the GCD
+int ex2(void){
+    int gcd;
+    int m, n, r, temp;
 
-    return 0.0;
+    printf("Enter two integers: ");
+    scanf(" %d %d", &m, &n);
+
+    //euclids algorithm
+
+    do{
+        r = m%n;
+        temp = m/n;
+
+        if (r == 0)
+        {
+            gcd = n;
+            printf("Greatest common divisor: %d\n", gcd);
+            return gcd;
+        }
+        m = n;
+        n = r;
+        
+    } while (n != 0);
+
+
+    return gcd;
 
 }
 
