@@ -24,7 +24,7 @@
 
 //prototype functions 
 void ex1(void);
-int ex2(void);
+int ex2(int first, int second);
 float ex3(void);
 float ex4(void);
 float ex5(void);
@@ -34,7 +34,8 @@ float ex6(void);
 int main(){
 
     //ex1();
-    ex2();
+    //ex2();
+    ex3();
 
     //ex4();
     //ex5();
@@ -76,8 +77,17 @@ float ex4(void){
 }
 
 //*********************
-//
+//write program that asks user to enter a fraction then display it in lowest terms
 float ex3(void){
+    int num, denom;
+    int gcd = 0;
+
+    printf("Enter a fraction:" );
+    scanf(" %d/%d", &num, &denom);
+    gcd = ex2(num, denom);
+    //printf("GCD: %d\n", gcd);
+    printf("In lowest terms: %d/%d\n\n", num/gcd, denom/gcd);
+
     
 
     return 0.0;
@@ -85,12 +95,12 @@ float ex3(void){
 
 //*********************
 // asks user to enter two ints, then calculates and displays the GCD
-int ex2(void){
+int ex2(int first, int second){
     int gcd;
-    int m, n, r, temp;
+    int m = first, n = second, r, temp;
 
-    printf("Enter two integers: ");
-    scanf(" %d %d", &m, &n);
+    //printf("Enter two integers: ");
+    //scanf(" %d %d", &m, &n);
 
     //euclids algorithm
 
@@ -101,7 +111,8 @@ int ex2(void){
         if (r == 0)
         {
             gcd = n;
-            printf("Greatest common divisor: %d\n", gcd);
+            //comment out cause im gonna use this function in func 3 to calc gcd
+            //printf("Greatest common divisor: %d\n", gcd);
             return gcd;
         }
         m = n;
