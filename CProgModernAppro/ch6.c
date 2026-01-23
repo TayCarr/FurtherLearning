@@ -10,7 +10,7 @@
  * 4. add a loop to broker.c so that the user can enter more than one trade and the program will calculate the commission on each
  * 5. generalize project 1 ch4 
  * 6./program that asks user to enter number n then displays even squares between 1-n
- * 7. rearrange square.c so that the for loop inits i, tests i, and increments i
+ * 7. rearrange square3.c so that the for loop inits i, tests i, and increments i
  * 8. print one-month calendar, user specifies days and the day month begins
  * 9. proj 8 ch2 uhhhhh
  * 10. proj 9 ch5 user can now enter more dates until 0/0/0
@@ -29,6 +29,7 @@ float ex3(void);
 float ex4(void);
 float ex5(void);
 float ex6(void);
+void ex11(void);
 
 
 int main(){
@@ -36,7 +37,8 @@ int main(){
     //ex1();
     //ex2();
     //ex3();
-    ex6();
+    //ex6();
+    ex11();
 
     //ex4();
     //ex5();
@@ -62,10 +64,39 @@ float ex7(){
 }
 
 //*********************
-//
-float ex5(){
+//approximate e by computing value of ... n is int entered by user
+//TODO idk the calculation is off...
+void ex11(void){
+    float n, i = 0, e = 0, j, temp = 1;
+    float denom = 0;
+    
 
-    return 0.0;
+    printf("Enter an integer: ");
+    scanf(" %f", &n);
+
+
+    while(i < n+1){
+        if (i == 0 || i == 1){
+            e++;
+            i++;
+
+        }
+        else{
+            for (j = 1; j < i+1; j++){
+                temp = temp * j;
+            }
+            e += (1/temp);
+            i++;
+
+        }
+        
+        //printf("current series: %f\n", 1/temp);
+        
+
+    }
+    printf(" e: %f\n", e);
+
+    
 }
 
 

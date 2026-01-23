@@ -66,16 +66,25 @@ float ex5(){
 //read in an integer and display it in octal base
 //TODO maybe have an array to toss the numbers in instead of doing math
 float ex4(void){
-    int num, octal, temp; 
+    int num, i = 0, j; 
+    int nums[10];
 
     printf("Enter a number between 0 and 32767: ");
     scanf(" %d", &num);
 
-    octal = num % 8;
-    num = num / 8;
-    temp = (num % 8) * 10;
-    octal = octal + temp; 
-    printf("In octal your number is: %d\n", octal);
+    while(num != 0){
+        nums[i] = num % 8;
+        num = num / 8;
+        i++;
+    }
+
+    printf("In octal your number is: ");
+    for(j = i-1; j > -1; j--){
+        printf("%d", nums[j]);
+
+    }
+    printf("\n");
+    
 
     return 0.0;
 }
