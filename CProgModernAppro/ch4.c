@@ -4,12 +4,12 @@
 */
 
 /**
- * 1. program that asks for a 2 digit number then prints it to user in reverse
- * 2. extend above to handle 3 digit
- * 3. rewrite #2 so that it prints the reverse without using aritmetic
- * TODO below, might skip them as they are so simple and very... boring.... all kinda hit the same topics...
- * 4. read in an integer and display it in octal base
- * 5. rewrite upc program so that the user enters one long digit instead of groups of 5
+ * 1./program that asks for a 2 digit number then prints it to user in reverse
+ * 2./extend above to handle 3 digit
+ * 3./rewrite #2 so that it prints the reverse without using aritmetic
+ * 4./read in an integer and display it in octal base(not using the built in)
+ * 5./rewrite upc program so that the user enters one long 11 digit then the check digit instead of groups of 5
+ * TODO
  * 6.modify upc program to work for EAN barcode numbers too  
 */
 
@@ -31,20 +31,14 @@ int main(){
 
     //ex1();
     //ex3();
-    ex4();
-    //ex5();
+    //ex4();
+    ex5();
+
     //ex7();
     //ex8();
 
 
     return 0;
-}
-
-//*********************
-//
-float ex8(){
-    
-    return 0.0; 
 }
 
 //*********************
@@ -55,8 +49,29 @@ float ex7(){
 }
 
 //*********************
-//
+//rewrite upc program so that the user enters one long 11 digit then the check digit instead of groups of 5
 float ex5(){
+
+    long int d; 
+    int i, first_sum, second_sum, total;
+    int nums[11];
+
+    printf("Enter the first 11 digits of a UPC: ");
+    scanf(" %ld", &d);
+    
+    //printf("in the first 11 digits: %ld\n", d);
+
+    for(i = 0; i < 11; i++){
+        nums[i] = d % 10; //number will be saved in reverse this way
+        d = d / 10;
+        //printf("%d\n", nums[i]);
+    }
+
+    first_sum = nums[10] + nums[8] + nums[6] + nums[4] + nums[2] + nums[0]; //first digit + third +5th + 7th + 9th +11
+    second_sum = nums[9] + nums[7] + nums[5] + nums[3] + nums[1] ; //2nd, 4th, 6th, 8th,10th
+    total = 3 * first_sum + second_sum;
+
+    printf("Check digit: %d\n", 9 - ((total - 1) % 10));
 
     return 0.0;
 }

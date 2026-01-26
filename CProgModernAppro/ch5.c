@@ -67,7 +67,7 @@ float ex11(){
 
     printf("You entered the number ");
     if (num > 10 && num < 20){
-        //TODO special cases
+        //special cases
         switch (num)
         {
         case 11:
