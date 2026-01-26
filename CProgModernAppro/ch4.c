@@ -41,34 +41,47 @@ int main(){
     return 0;
 }
 
-//*********************
-//
-float ex7(){
-   
-    return 0.0;
-}
 
 //*********************
 //rewrite upc program so that the user enters one long 11 digit then the check digit instead of groups of 5
+//modify upc program to work for EAN barcode numbers too 
 float ex5(){
 
     long int d; 
-    int i, first_sum, second_sum, total;
-    int nums[11];
+    int i = 0, first_sum, second_sum, total;
+    int nums[12];
 
-    printf("Enter the first 11 digits of a UPC: ");
+    nums[11] = -1;
+
+    printf("Enter the first 11 digits of a UPC or the first 12 digits of a EAN: ");
     scanf(" %ld", &d);
     
     //printf("in the first 11 digits: %ld\n", d);
 
-    for(i = 0; i < 11; i++){
+    while(d != 0 || i < 11){ //if first digit is 0 it skips over it now was originally using range of 11 but with addition of possibly 12 number 
+    //i swapped to a while loop for the input not 0 but ran into the problem 
         nums[i] = d % 10; //number will be saved in reverse this way
         d = d / 10;
-        //printf("%d\n", nums[i]);
+        //printf("%d :%d\n", i, nums[i]);
+        i++;
+    }
+    //printf("nums11: %d\n", nums[11]);
+
+    //UPC
+    if (nums[11] == -1){
+        //printf("UPC\n");
+        first_sum = nums[10] + nums[8] + nums[6] + nums[4] + nums[2] + nums[0]; //first digit + third +5th + 7th + 9th +11
+        second_sum = nums[9] + nums[7] + nums[5] + nums[3] + nums[1] ; //2nd, 4th, 6th, 8th,10th
+
+    }
+    else{ //EAN
+    //printf("EAN\n");
+        first_sum = nums[10] + nums[8] + nums[6] + nums[4] + nums[2] + nums[0] ; //2nd, 4th, 6th, 8th,10th, 12th
+        second_sum = nums[11] + nums[9] + nums[7] + nums[5] + nums[3] + nums[1]; //first digit + third +5th + 7th + 9th +11
+
     }
 
-    first_sum = nums[10] + nums[8] + nums[6] + nums[4] + nums[2] + nums[0]; //first digit + third +5th + 7th + 9th +11
-    second_sum = nums[9] + nums[7] + nums[5] + nums[3] + nums[1] ; //2nd, 4th, 6th, 8th,10th
+    
     total = 3 * first_sum + second_sum;
 
     printf("Check digit: %d\n", 9 - ((total - 1) % 10));
