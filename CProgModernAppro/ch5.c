@@ -9,10 +9,10 @@
 /**
  * 1./calculates how many digits a number contains 
  * 2./ask user for 24 hour time, display in 12 hour 
- * 3. modify broker.c to ask the user to enter the number of shares and price per share, instead of value of trade 
+ * 3./modify broker.c to ask the user to enter the number of shares and price per share, instead of value of trade 
  *      AND add statements that compute the commision charged by a rival broker ($33 plus 3 cents per share for 
  *      fewer than 2000 shares; $33 plus 2 cents per share for 2000 shares or more) display rivals commission as well as original broker
- * 4. write a program that asks the user to enter a wind speed (in knots), then display the corresponding description
+ * 4./write a program that asks the user to enter a wind speed (in knots), then display the corresponding description
  * 5. write a program that asks the user to enter the amount of taxable income, then display the tax due
  * 6. modify upc.c program so that it checks if a UPC is valid, after the user enters a upc it will display valid or not valid
  * 7./write a program that finds the smallest of four integers entered by the user
@@ -45,9 +45,9 @@ int main(){
     //ex2();
     //ex7();
     //ex11();
-    ex3();
+    //ex3();
+    ex4();
 
-    //ex4();
     //ex5();
 
     return 0;
@@ -207,8 +207,31 @@ float ex5(){
 
 
 //*********************
-//
+//write a program that asks the user to enter a wind speed (in knots), then display the corresponding description
 float ex4(void){
+    float speed;
+
+    printf("Enter wind speed in knots: ");
+    scanf("%f", &speed);
+
+    if(speed < 1){
+        printf("Wind is calm\n");
+    }
+    else if(speed < 3){
+        printf("Wind is a light air\n");
+    }
+    else if(speed < 27){
+        printf("Wind is a breeze\n");
+    }
+    else if(speed < 47){
+        printf("Wind is gale\n");
+    }
+    else if(speed < 63){
+        printf("Wind is storming\n");
+    }
+    else{
+        printf("Wind is a hurricane\n");
+    }
     
 
     return 0.0;
