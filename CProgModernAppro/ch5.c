@@ -13,7 +13,9 @@
  *      AND add statements that compute the commision charged by a rival broker ($33 plus 3 cents per share for 
  *      fewer than 2000 shares; $33 plus 2 cents per share for 2000 shares or more) display rivals commission as well as original broker
  * 4./write a program that asks the user to enter a wind speed (in knots), then display the corresponding description
+ *      5 is just a series of if statements so gonna skip 
  * 5. write a program that asks the user to enter the amount of taxable income, then display the tax due
+ *      6 idk what it means by valid?? so gonna skip i guess i would just ask user to input the check digit and if not same as calculated not valid ???
  * 6. modify upc.c program so that it checks if a UPC is valid, after the user enters a upc it will display valid or not valid
  * 7./write a program that finds the smallest of four integers entered by the user
  * 8. write a program that asks user to enter a time (hours and minutes, using 24 hour) program displays the dep and arrival times for flight
@@ -25,6 +27,7 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 //defines 
 
@@ -33,9 +36,8 @@ void ex1(void);
 float ex2(void);
 float ex3(void);
 float ex4(void);
-float ex5(void);
-float ex6(void);
 float ex7(void);
+void ex8(void);
 float ex11(void);
 
 
@@ -46,9 +48,8 @@ int main(){
     //ex7();
     //ex11();
     //ex3();
-    ex4();
-
-    //ex5();
+    //ex4();
+    ex8();
 
     return 0;
 }
@@ -174,6 +175,121 @@ float ex11(){
 }
 
 //*********************
+//write a program that asks user to enter a time (hours and minutes, using 24 hour) program displays the dep and arrival times for flight
+//  whose dep time is closest to input
+void ex8(){
+    int hour, minute, time, min, marker, temp;
+
+    printf("***  Daily Flights  ***\n\n");
+    printf("Departure Time\tArrival Time\n");
+    printf("  8:00am\t 10:16am\n");
+    printf("  9:43am\t 11:52am\n");
+    printf(" 11:19am\t  1:31pm\n");
+    printf(" 12:47am\t  3:00pm\n");
+    printf("  2:00pm\t  4:08pm\n");
+    printf("  3:45pm\t  5:55pm\n");
+    printf("  7:00pm\t  9:20pm\n");
+    printf("  9:45pm\t 11:58pm\n\n");
+
+    printf("Enter a 24-hour time: ");
+    scanf("%d:%d", &hour, &minute);
+
+    time = (hour * 60) + minute;
+
+    if(time < (8 * 60)){
+        printf("Closest departure time is 8:00am, arriving at 10:16am\n");
+        return;
+
+    }
+    else if(time > ((21 * 60)+45)){
+        printf("Closest departure time is 9:45pm, arriving at 11:58pm\n");
+        return;
+    }
+
+    //could put in array and loop calculations but idk i think either way lots of repeated code and typing...
+
+    //calculate the difference if less than min replace flag and min
+    //will work with absolute values
+    min = time - (8*60);
+    marker = 1;
+
+    temp = abs(time - ((9*60)+43));
+    if( temp < min){
+        min = temp;
+        marker = 2;  
+        //printf("marker: %d, min:%d\n", marker, min);
+    }
+    temp = abs(time - ((11*60)+19));
+    if( temp < min){
+        min = temp;
+        marker = 3;  
+        //printf("marker: %d, min:%d\n", marker, min);
+    }
+    temp = abs(time - ((12*60)+47));
+    if( temp < min){
+        min = temp;
+        marker = 4; 
+        //printf("marker: %d, min:%d\n", marker, min); 
+    }
+    temp = abs(time - ((14*60)));
+    if( temp < min){
+        min = temp;
+        marker = 5;
+        //printf("marker: %d, min:%d\n", marker, min);  
+    }
+    temp = abs(time - ((15*60)+45));
+    if( temp < min){
+        min = temp;
+        marker = 6;  
+        //printf("marker: %d, min:%d\n", marker, min);
+    }
+    temp = abs(time - ((19*60)));
+    if( temp < min){
+        min = temp;
+        marker = 7;  
+        //printf("marker: %d, min:%d\n", marker, min);
+    }
+    temp = abs(time - ((21*60)+45));
+    if( temp < min){
+        min = temp;
+        marker = 8;  
+        //printf("marker: %d, min:%d\n", marker, min);
+    }
+    //printf("FINAL marker: %d, min:%d\n", marker, min);
+
+    switch (marker)
+    {
+    case 1:
+        printf("Closest departure time is 8:00am, arriving at 10:16am\n");
+        return;
+    case 2:
+        printf("Closest departure time is 9:43am, arriving at 11:52am\n");
+        return;
+    case 3:
+        printf("Closest departure time is 11:19am, arriving at 1:31pm\n");
+        return;
+    case 4:
+        printf("Closest departure time is 12:47am, arriving at 3:00pm\n");
+        return;
+    case 5:
+        printf("Closest departure time is 2:00pm, arriving at 4:08pm\n");
+        return;
+    case 6:
+        printf("Closest departure time is 3:45pm, arriving at 5:55pm\n");
+        return;
+    case 7:
+        printf("Closest departure time is 7:00pm, arriving at 9:20pm\\n");
+        return;
+    case 8:
+        printf("Closest departure time is 9:45pm, arriving at 11:58pm\n");
+        return;
+
+    }
+
+    return ;
+}
+
+//*********************
 //write a program that finds the largest and smallest of four integers entered by the user
 float ex7(){
     int nums[3];
@@ -195,13 +311,6 @@ float ex7(){
     }
 
    printf("Largest: %d\nSmallest: %d\n\n", max, min);
-    return 0.0;
-}
-
-//*********************
-//
-float ex5(){
-
     return 0.0;
 }
 
