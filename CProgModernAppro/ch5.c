@@ -18,7 +18,7 @@
  *      6 idk what it means by valid?? so gonna skip i guess i would just ask user to input the check digit and if not same as calculated not valid ???
  * 6. modify upc.c program so that it checks if a UPC is valid, after the user enters a upc it will display valid or not valid
  * 7./write a program that finds the smallest of four integers entered by the user
- * 8. write a program that asks user to enter a time (hours and minutes, using 24 hour) program displays the dep and arrival times for flight
+ * 8.//write a program that asks user to enter a time (hours and minutes, using 24 hour) program displays the dep and arrival times for flight
  *      whose dep time is closest to input 
  * 9. prompt user to enter two dates and then indicate which date comes earlier on the calendar 
  * 10. using switch statement write a program that converts a numerical grade to a letter grade
