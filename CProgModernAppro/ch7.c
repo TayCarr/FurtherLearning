@@ -27,7 +27,6 @@
 //defines 
 
 //prototype functions 
-void ex1(void);
 float ex2(void);
 float ex3(void);
 float ex4(void);
@@ -37,8 +36,9 @@ float ex6(void);
 
 int main(){
 
-    //ex1();
-    //ex2();
+    ex2();
+
+
     //ex4();
     //ex5();
     //ex7();
@@ -87,16 +87,33 @@ float ex3(void){
 }
 
 //*********************
-// 
+// modify square2.c of section 6.3 so that it pauses every 24 squares and displays "Press enter to continue...", 
+//     after displaying program waits for enter key (using getchar)
 float ex2(void){
+    int i, n, counter = 0;
+    char cont;
+
+    printf("This program prints a table of squares. \n");
+    printf("Enter number of entries in the table: ");
+    scanf(" %d", &n);
+    getchar();//clear new line, need to flush since there is lingering from scanf
+
+    for( i = 0; i <= n; i++){
+        printf("%10d%10d\n", i, i*i);
+        counter++;
+
+        if(counter == 24){
+            counter = 0;
+            printf("\nPress Enter to continue...");
+
+            do{
+                cont = getchar();
+            }while (cont != '\n');    
+
+        }
+    }
+
 
     return 0.0;
 
-}
-
-//*********************
-//
-
-void ex1(void){
-    
 }
