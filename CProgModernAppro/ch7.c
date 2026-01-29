@@ -5,9 +5,9 @@
 
 /**
  * 1. skipping cause its just changing previous prog int types to see overflow 
- * 2. modify square2.c of section 6.3 so that it pauses every 24 squares and displays "Press enter to continue...", 
+ * 2.\modify square2.c of section 6.3 so that it pauses every 24 squares and displays "Press enter to continue...", 
  *      after displaying program waits for enter key (using getchar)
- * 3. modify sum2.c program from section 7.1 to sum a series of double values
+ * 3.\modify sum2.c program from section 7.1 to sum a series of double values
  * 4. write a program that translates an alphabetic phone number to numeric, assume that all letters entered are uppercase 
  * 5. using scrabble face values for letters make a program that computes the value of words entered, allow mix of upper and lower (use toupper)
  * 6. program that prints the values of sizeof(int), short, long, float, double, long double
@@ -36,7 +36,8 @@ float ex6(void);
 
 int main(){
 
-    ex2();
+    //ex2();
+    ex3();
 
 
     //ex4();
@@ -79,8 +80,19 @@ float ex4(void){
 }
 
 //*********************
-//
+//modify sum2.c program from section 7.1 to sum a series of double values
 float ex3(void){
+    double n, sum = 0;
+
+    printf("This program sums a series of integers.\n");
+    printf("Enter integers (0 to terminate): ");
+    scanf("%lf", &n);
+    while (n != 0)
+    {
+        sum += n;
+        scanf("%lf", &n);
+    }
+    printf("The sum is: %.3lf\n", sum);
     
 
     return 0.0;
