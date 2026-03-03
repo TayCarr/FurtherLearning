@@ -38,9 +38,9 @@ int main(){
 
     //ex2();
     ex3();
+    ex4();
 
 
-    //ex4();
     //ex5();
     //ex7();
     //ex8();
@@ -72,8 +72,11 @@ float ex5(){
 
 
 //*********************
-//
+//write a program that translates an alphabetic phone number to numeric, assume that all letters entered are uppercase
 float ex4(void){
+    printf("Enter phone number: ");
+
+    //perhaps getchar then go through and build a string idk
     
 
     return 0.0;
